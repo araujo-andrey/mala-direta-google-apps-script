@@ -35,7 +35,6 @@ Este projeto automatiza o envio de **mala direta personalizada** a partir de dad
    - Inclua também o `appsscript.json` se estiver usando o projeto versionado.
 
 4. **Ativar a barra lateral**  
-   - Execute a função `mostrarSidebar()` **uma vez**.  
    - Para que a sidebar funcione como Add-on, crie um **Add-on de teste**:  
      - No editor do Apps Script, clique em **Executar > Testar Add-on**.  
      - Escolha a planilha onde deseja testar.  
@@ -51,5 +50,6 @@ Imagine uma secretaria acadêmica que precisa enviar certificados para 100 aluno
 
 ---
 🔗 Autor: [Andrey da Silva Araujo](https://github.com/araujo-andrey)
+
 
 
