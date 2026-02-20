@@ -116,7 +116,7 @@ function gerarPDF(modeloId, modeloNome, intervalo) {
     var documentoCopia = DocumentApp.openById(idCopia);
     var texto = documentoCopia.getBody();
 
-    // 1. Substituição Genérica (baseada no cabeçalho)
+    // 1. Substituição (baseada no cabeçalho)
     for (var j = 0; j < dicionario[i].length; j++) {
       var troca = dicionario[i][j];
       // Converte para string para evitar erro no replaceText se for data ou número      
@@ -130,11 +130,11 @@ function gerarPDF(modeloId, modeloNome, intervalo) {
     texto.replaceText("{{data_extenso}}", dataExtenso());
     texto.replaceText("{{data_numerica}}", dataNumerica());
     
-    // CORREÇÃO: Removemos a limpeza forçada do {{Nome}} aqui, pois se ele já foi substituído no passo 1, 
+    // CORREÇÃO: Removi a limpeza forçada do {{Nome}} aqui, pois se ele já foi substituído no passo 1, 
     // isso não fará nada. Se não foi, isso limparia o placeholder. Deixarei comentado por segurança.
     // texto.replaceText("{{Nome}}", ""); 
     
-    // 3. SEU BLOCO PROBLEMÁTICO (CORRIGIDO)
+    // 3.
     for (var w = 0; w < cabecalho.length; w++) {
       var valorCelula = dicionario[i][w];
       
@@ -171,4 +171,5 @@ function gerarPDF(modeloId, modeloNome, intervalo) {
     emails: lista_emails,
     pdfs: lista_pdfs
   };
+
 }
