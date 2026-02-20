@@ -8,7 +8,7 @@ Este projeto automatiza o envio de mala direta personalizada a partir de dados n
 
 ## 📌 Funcionalidades
 * **Geração em Lote:** Criação automática de PDFs a partir de modelos pré-aprovados no Google Docs.
-* **Dados Dinâmicos:** Substituição de placeholders (`{{Nome}}`, `{{Curso}}`, etc.) pelos dados correspondentes na planilha.
+* **Dados Dinâmicos:** Substituição de placeholders (`{{Nome}}`, `{{E-mail}}`, etc.) pelos dados correspondentes na planilha.
 * **Comunicação Automatizada:** Disparo de e-mails personalizados com os PDFs em anexo ou criação de rascunhos no Gmail para aprovação prévia.
 * **Organização no Drive:** Salva automaticamente os PDFs gerados em pastas organizadas pelo nome do modelo utilizado.
 * **Interface UI:** Menu lateral interativo no Google Sheets (HTML/CSS) para facilitar o uso por usuários não técnicos.
@@ -61,3 +61,4 @@ Imagine uma secretaria acadêmica que precisa enviar certificados para 100 aluno
 4. Envia o e-mail com o certificado em anexo para cada aluno automaticamente.
 
 🔗 **Autor:** Andrey da Silva Araujo
+
