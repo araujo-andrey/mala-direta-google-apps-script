@@ -1,11 +1,10 @@
-# Mala Direta Automatizada com Google Apps Script
+<img width="1920" height="870" alt="Mala Direta" src="https://github.com/user-attachments/assets/b49523da-5751-415a-a41d-8dc2e8ba5a2d" /># Mala Direta Automatizada com Google Apps Script
 
 **Solução desenvolvida para reduzir o trabalho manual e zerar erros operacionais na geração de documentos e envio de e-mails em lote.**
 
 Este projeto automatiza o envio de mala direta personalizada a partir de dados no Google Sheets, integrando com Google Docs e Gmail através de uma interface amigável.
 
-![Print da Interface do Sistema](MenuLateral.png) *(Substitua por um print da sua barra lateral)*
-
+![Print da Interface do Sistema](Mala Direta.png)
 ## 📌 Funcionalidades
 * **Geração em Lote:** Criação automática de PDFs a partir de modelos pré-aprovados no Google Docs.
 * **Dados Dinâmicos:** Substituição de placeholders (`{{Nome}}`, `{{E-mail}}`, etc.) pelos dados correspondentes na planilha.
@@ -61,5 +60,6 @@ Imagine uma secretaria acadêmica que precisa enviar certificados para 100 aluno
 4. Envia o e-mail com o certificado em anexo para cada aluno automaticamente.
 
 🔗 **Autor:** Andrey da Silva Araujo
+
 
 
