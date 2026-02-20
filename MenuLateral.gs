@@ -9,7 +9,7 @@
  */
 
 //cole a id da planilha onde terão todos templates de documentos e suas ids.
-id_planilha = "coloque a id da planilha google aqui";
+id_planilha = "1sYU335cv36VWzpR7wT7t3TRFLsGE13AosMX8eAkR06s";
 
 function mostrarSidebar() {
   
@@ -125,7 +125,7 @@ function mostrarSidebar() {
       <input type="text" id="assunto_email" placeholder="Assunto do email" title="Assunto do email" />
       <p>Corpo do email:</p>
       <textarea id="corpo_email"
-      placeholder="Prezado(a) [NOME],&#10;&#10;Encaminhamos em anexo o documento gerado via mala direta para sua apreciação.&#10;&#10;Atenciosamente,&#10;&#10;Secretaria de Pós-Graduação/Graduate Studies Office&#10;Instituto de Física da USP/Institute of Physics - USP&#10;http://portal.if.usp.br/pg"
+      placeholder="Prezado(a) [NOME],&#10;&#10;Encaminhamos em anexo o documento gerado via mala direta para sua apreciação.&#10;&#10;Atenciosamente,&#10;&#10;E-mail via Mala Direta"
       title="Corpo do email"
       oninput="autoResize(this)"></textarea>
     </div>
