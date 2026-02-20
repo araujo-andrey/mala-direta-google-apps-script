@@ -4,7 +4,7 @@
 
 Este projeto automatiza o envio de mala direta personalizada a partir de dados no Google Sheets, integrando com Google Docs e Gmail através de uma interface amigável.
 
-![Print da Interface do Sistema](insira_aqui_o_link_de_um_print_da_sua_sidebar.png) *(Substitua por um print da sua barra lateral)*
+![Print da Interface do Sistema](cole_o_link_da_sua_imagem_aqui.png) *(Substitua por um print da sua barra lateral)*
 
 ## 📌 Funcionalidades
 * **Geração em Lote:** Criação automática de PDFs a partir de modelos pré-aprovados no Google Docs.
@@ -27,8 +27,8 @@ Este projeto automatiza o envio de mala direta personalizada a partir de dados n
 ## 🔧 Como usar
 
 1. **Planilha de Dados:**
-   * Crie uma planilha no Google Sheets contendo pelo menos a coluna `Nome`.
-   * Para envios automáticos, a coluna `Email` é obrigatória.
+   * Crie uma planilha no Google Sheets contendo obrigatoriamente a coluna **Nome** ou **Nome completo** (se faltar, o script acusará erro).
+   * Para envios automáticos, a coluna **Email** também é obrigatória.
    * Adicione colunas adicionais para substituir placeholders no modelo do Google Docs (ex.: `Curso`, `Data`).
 
 2. **Planilha Auxiliar de Modelos:**
@@ -42,10 +42,16 @@ Este projeto automatiza o envio de mala direta personalizada a partir de dados n
 
 4. **Importar código:**
    * Cole os arquivos `.gs` no editor de scripts da sua planilha (Extensões > Apps Script).
-   * Atualize o `appsscript.json`.
+   * Atualize o `appsscript.json` para incluir o manifesto correto.
 
-5. **Execução:**
-   * Ao abrir a planilha, acesse a Sidebar, selecione o modelo, o intervalo de dados e a preferência de e-mail. Clique em "Iniciar Mala Direta".
+5. **Ativar a barra lateral (Modo Add-on):**
+   * Para que a sidebar funcione como Add-on, crie um Add-on de teste.
+   * No editor do Apps Script, clique em **Executar > Testar Add-on**.
+   * Escolha a planilha onde deseja testar o script.
+   * A barra lateral aparecerá no menu da planilha em **Extensões > Add-ons > Testar**.
+
+6. **Execução:**
+   * Com a Sidebar aberta, selecione o modelo, o intervalo de dados e a preferência de e-mail. Clique em "Iniciar Mala Direta".
 
 ## 📬 Exemplo de uso
 Imagine uma secretaria acadêmica que precisa enviar certificados para 100 alunos:
