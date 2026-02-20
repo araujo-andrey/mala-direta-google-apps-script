@@ -4,7 +4,7 @@
 
 Este projeto automatiza o envio de mala direta personalizada a partir de dados no Google Sheets, integrando com Google Docs e Gmail através de uma interface amigável.
 
-![Print da Interface do Sistema](cole_o_link_da_sua_imagem_aqui.png) *(Substitua por um print da sua barra lateral)*
+![Print da Interface do Sistema](MenuLateral.png) *(Substitua por um print da sua barra lateral)*
 
 ## 📌 Funcionalidades
 * **Geração em Lote:** Criação automática de PDFs a partir de modelos pré-aprovados no Google Docs.
@@ -61,4 +61,5 @@ Imagine uma secretaria acadêmica que precisa enviar certificados para 100 aluno
 4. Envia o e-mail com o certificado em anexo para cada aluno automaticamente.
 
 🔗 **Autor:** Andrey da Silva Araujo
+
 
