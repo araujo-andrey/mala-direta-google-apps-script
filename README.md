@@ -37,7 +37,7 @@ Este projeto automatiza o envio de mala direta personalizada a partir de dados n
    * Cole o ID dessa planilha auxiliar na variável `id_planilha` dentro do arquivo `MenuLateral.gs`.
 
 3. **Modelo do Documento:**
-   * Crie um Google Docs com os placeholders correspondentes às colunas da sua planilha (ex.: `{{Nome}}`, `{{Email}}`, `{{Curso}}`).
+   * Crie um Google Docs com os placeholders correspondentes às colunas da sua planilha (ex.: `{{Nome}}`, `{{Email}}`, `{{Telefone}}`).
 
 4. **Importar código:**
    * Cole os arquivos `.gs` no editor de scripts da sua planilha (Extensões > Apps Script).
@@ -60,6 +60,7 @@ Imagine uma secretaria acadêmica que precisa enviar certificados para 100 aluno
 4. Envia o e-mail com o certificado em anexo para cada aluno automaticamente.
 
 🔗 **Autor:** Andrey da Silva Araujo
+
 
 
 
