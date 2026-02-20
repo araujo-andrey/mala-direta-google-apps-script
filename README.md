@@ -1,55 +1,57 @@
 # Mala Direta Automatizada com Google Apps Script
 
-Este projeto automatiza o envio de **mala direta personalizada** a partir de dados no Google Sheets, integrando com Google Docs e Gmail.
+**Solução desenvolvida para reduzir o trabalho manual e zerar erros operacionais na geração de documentos e envio de e-mails em lote.**
+
+Este projeto automatiza o envio de mala direta personalizada a partir de dados no Google Sheets, integrando com Google Docs e Gmail através de uma interface amigável.
+
+![Print da Interface do Sistema](insira_aqui_o_link_de_um_print_da_sua_sidebar.png) *(Substitua por um print da sua barra lateral)*
 
 ## 📌 Funcionalidades
-- Geração automática de PDFs a partir de modelos do Google Docs
-- Substituição de placeholders por dados da planilha
-- Envio de e-mails personalizados com anexos
-- Criação de rascunhos no Gmail
-- Interface amigável via barra lateral no Google Sheets
+* **Geração em Lote:** Criação automática de PDFs a partir de modelos pré-aprovados no Google Docs.
+* **Dados Dinâmicos:** Substituição de placeholders (`{{Nome}}`, `{{Curso}}`, etc.) pelos dados correspondentes na planilha.
+* **Comunicação Automatizada:** Disparo de e-mails personalizados com os PDFs em anexo ou criação de rascunhos no Gmail para aprovação prévia.
+* **Organização no Drive:** Salva automaticamente os PDFs gerados em pastas organizadas pelo nome do modelo utilizado.
+* **Interface UI:** Menu lateral interativo no Google Sheets (HTML/CSS) para facilitar o uso por usuários não técnicos.
 
 ## 🚀 Tecnologias utilizadas
-- Google Apps Script (JavaScript)
-- Google Sheets
-- Google Docs
-- Gmail API
+* **Google Apps Script (JavaScript V8)**
+* **APIs do Google Workspace:** Sheets, Docs, Drive, Gmail.
+* **Front-end:** HTML e CSS embutidos para a Sidebar.
 
 ## 📂 Estrutura do projeto
-- `Code.gs` → script principal com todas as funções
-- `appsscript.json` → arquivo de configuração do projeto (obrigatório para importar como projeto no Apps Script)
+* `MenuLateral.gs` → Controla a interface gráfica (HTML/CSS) e a comunicação entre a interface do usuário e o backend.
+* `Funcoes.gs` → Core do sistema (lógica de geração de PDFs, controle de pastas no Drive e envio de e-mails).
+* `FuncoesAuxiliares.gs` → Funções utilitárias para manipulação, extração e formatação de datas.
+* `appsscript.json` → Manifesto do projeto (configuração de permissões e escopos).
 
 ## 🔧 Como usar
 
-1. **Planilha de dados**  
-   - Crie uma planilha no Google Sheets contendo pelo menos as colunas obrigatórias:  
-     `Nome` | `Email`  
-   - Outras colunas podem ser adicionadas para substituir placeholders no modelo do Google Docs, como `Curso`, `Data`, etc.  
-   - **Atenção:** se faltar a coluna `Nome` ou `Email`, o script não funcionará.
+1. **Planilha de Dados:**
+   * Crie uma planilha no Google Sheets contendo pelo menos a coluna `Nome`.
+   * Para envios automáticos, a coluna `Email` é obrigatória.
+   * Adicione colunas adicionais para substituir placeholders no modelo do Google Docs (ex.: `Curso`, `Data`).
 
-2. **Modelo do documento**  
-   - Crie um Google Docs com os placeholders correspondentes (ex.: `{{Nome}}`, `{{Email}}`, `{{Curso}}`).
+2. **Planilha Auxiliar de Modelos:**
+   * Crie uma planilha separada para guardar os IDs dos seus modelos.
+   * Coluna A: Nome do Modelo (Ex: Certificado Conclusão)
+   * Coluna B: ID do documento no Drive.
+   * Cole o ID dessa planilha auxiliar na variável `id_planilha` dentro do arquivo `MenuLateral.gs`.
 
-3. **Importar código**  
-   - Cole o arquivo `Code.gs` no editor de scripts da planilha.  
-   - Inclua também o `appsscript.json` se estiver usando o projeto versionado.
+3. **Modelo do Documento:**
+   * Crie um Google Docs com os placeholders correspondentes às colunas da sua planilha (ex.: `{{Nome}}`, `{{Email}}`, `{{Curso}}`).
 
-4. **Ativar a barra lateral**  
-   - Para que a sidebar funcione como Add-on, crie um **Add-on de teste**:  
-     - No editor do Apps Script, clique em **Executar > Testar Add-on**.  
-     - Escolha a planilha onde deseja testar.  
-     - A barra lateral aparecerá no menu **Extensões > Add-ons > Testar**.
+4. **Importar código:**
+   * Cole os arquivos `.gs` no editor de scripts da sua planilha (Extensões > Apps Script).
+   * Atualize o `appsscript.json`.
 
-5. **Gerar PDFs e enviar e-mails**  
-   - Selecione o modelo, o intervalo de dados, configure se quer enviar e-mails ou criar rascunhos, e clique em **Iniciar Mala Direta**.
+5. **Execução:**
+   * Ao abrir a planilha, acesse a Sidebar, selecione o modelo, o intervalo de dados e a preferência de e-mail. Clique em "Iniciar Mala Direta".
 
 ## 📬 Exemplo de uso
-Imagine uma secretaria acadêmica que precisa enviar certificados para 100 alunos:  
-- Basta colocar os nomes e e-mails na planilha.  
-- O sistema gera os PDFs personalizados e envia para cada aluno automaticamente.
+Imagine uma secretaria acadêmica que precisa enviar certificados para 100 alunos:
+1. Basta colocar os nomes e e-mails na planilha.
+2. O sistema gera os 100 PDFs com os nomes corretos.
+3. Salva todos em uma pasta específica no Drive.
+4. Envia o e-mail com o certificado em anexo para cada aluno automaticamente.
 
----
-🔗 Autor: [Andrey da Silva Araujo](https://github.com/araujo-andrey)
-
-
-
+🔗 **Autor:** Andrey da Silva Araujo
